@@ -1,4 +1,6 @@
 package linkedlist56;
+
+
 /*
  * Q1. Print Linked List
 

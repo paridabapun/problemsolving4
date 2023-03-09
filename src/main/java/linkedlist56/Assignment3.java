@@ -1,5 +1,6 @@
 package linkedlist56;
 
+
 /*
  * Q3. Insert in Linked List
 You are given A which is the head of a linked list. Also given is the value B and position C. Complete the function that should insert a new node with the said value at the given position.

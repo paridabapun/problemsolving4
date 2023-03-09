@@ -1,5 +1,6 @@
 package linkedlist56;
 
+
 /*
  *Q4. Delete in Linked List
 Problem Description

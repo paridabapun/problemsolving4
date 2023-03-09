@@ -1,5 +1,6 @@
 package linkedlist56;
 
+
 /*
  * GIVEN the head of the LL return the size of the LL.
  * 

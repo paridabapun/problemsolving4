@@ -1,4 +1,6 @@
 package linkedlist56;
+
+
 /*
  * Q2. Check sorted Linked List
 

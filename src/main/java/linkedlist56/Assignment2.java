@@ -1,5 +1,6 @@
 package linkedlist56;
 
+
 /*
  * Q2. Search in Linked List
 

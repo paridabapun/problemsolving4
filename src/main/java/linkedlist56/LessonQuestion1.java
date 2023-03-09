@@ -1,7 +1,7 @@
 package linkedlist56;
 
-/*
- * create a LL of n nodes [values 1 to n ]. Return the head node (n > 0)
+
+/* create a LL of n nodes [values 1 to n ]. Return the head node (n > 0)
  */
 public class LessonQuestion1 {
 

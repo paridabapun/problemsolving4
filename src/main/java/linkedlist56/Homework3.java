@@ -1,6 +1,7 @@
 package linkedlist56;
+
 /*
- *3. Compare Linked List
+ * 3. Compare Linked List
 
 Problem Description
 Given heads of two linked lists A and B, check if they are identical i.e. each of their corresponding nodes should contain the same data. The two given linked lists may or may not be of the same length.
