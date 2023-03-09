@@ -9,11 +9,17 @@ public class LessonQuestion2 {
 	public static void main(String[] args) {
 	}
 
-	public static int calSize(Node node) {
-		Node head = new Node(0);
+	public static int sizeOfLL(Node head) {
+
 		Node tail = head;
-		
-		return 2;
+		int count = 0;
+		while (tail != null) {
+			count++;
+			tail = tail.next;
+
+		}
+
+		return count;
 	}
 
 }
