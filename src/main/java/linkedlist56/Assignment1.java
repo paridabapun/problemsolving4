@@ -45,5 +45,15 @@ For Input 2:
 We print the given linked list
  */
 public class Assignment1 {
+	public void solve(Node A) {
 
+		while (A != null) {
+
+			System.out.print(A.data + " ");
+
+			A = A.next;
+		}
+		System.out.println();
+	}
 }
+
