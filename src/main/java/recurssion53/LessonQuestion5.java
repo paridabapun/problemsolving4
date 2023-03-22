@@ -7,9 +7,11 @@ public class LessonQuestion5 {
 		if (n == 1) {
 			System.out.print(1+" ");
 			return;
+			
 		}
-		printt(n - 1);
 		System.out.print(n+" ");
+		printt(n - 1);
+		
 
 	}
 
