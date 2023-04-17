@@ -1,6 +1,6 @@
 package string50;
 
-// Given a char[] which contains only lowercase letter . Sort the given char[] in alphabetical order
+// Given a char[] say whether it is a palindrome.
 
 public class LessonQuestion3 {
 
