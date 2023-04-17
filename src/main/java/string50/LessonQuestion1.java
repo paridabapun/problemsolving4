@@ -19,7 +19,7 @@ public class LessonQuestion1 {
 
 	public static void main(String[] args) {
 		char ch[] = { 'B', 'a', 'c', 'd', 'a', 'b', 'e', 'c' };
-		
+
 		toggle(ch);
 		for (int i = 0; i < ch.length; i++) {
 			System.out.print(ch[i] + " ");
