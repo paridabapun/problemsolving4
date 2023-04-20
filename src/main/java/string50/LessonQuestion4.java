@@ -1,22 +1,14 @@
 package string50;
 
-// Given a char[] which contains only lowercase letter . Sort the given char[] in alphabetical order
+// Given a String calculate the length of longest palindrome substring.
+
 
 public class LessonQuestion4 {
 
 	public static boolean checkPalindrome(char ch[]) {
+		
 
-		int fi = 0;
-		int li = ch.length - 1;
-
-		while (fi < li) {
-			if (ch[fi] != ch[li]) {
-				return false;
-			}
-			fi++;
-			li--;
-		}
-		return true;
+	return true;
 	}
 
 	public static void main(String[] args) {
