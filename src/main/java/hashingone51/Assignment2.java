@@ -71,12 +71,12 @@ public class Assignment2 {
 					hashMap.put(A[i], 1);
 				}
 			}
-			
-			for(int i =0; i <n;i++) {
-				if(hashMap.get(A[i]) == 1) {
+
+			for (int i = 0; i < n; i++) {
+				if (hashMap.get(A[i]) == 1) {
 					return A[i];
 				}
 			}
 			return 0;
-}
-}
+		}
+	}
