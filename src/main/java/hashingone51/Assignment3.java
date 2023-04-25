@@ -1,94 +1,89 @@
 package hashingone51;
 
-import java.util.HashMap;
+import java.util.HashSet;
 
 /*
  * *
- * Q1. Frequency of element query
+ *. Sub-array with 0 sum
+
  * 
  * Problem Description
-Given an array A. You have some integers given in the array B.
+Given an array of integers A, find and return whether the given array contains a non-empty subarray with a sum equal to 0.
 
-For the i-th number, find the frequency of B[i] in the array A and return a list containing all the frequencies.
+If the given array contains a sub-array with sum zero return 1, else return 0.
 
 
 
 Problem Constraints
-1 <= |A| <= 105
+1 <= |A| <= 100000
 
-1 <= |B| <= 105
-
-1 <= A[i] <= 105
-
-1 <= B[i] <= 105
+-10^9 <= A[i] <= 10^9
 
 
 
 Input Format
-First argument A is an array of integers.
-
-Second argument B is an array of integers denoting the queries.
+The only argument given is the integer array A.
 
 
 
 Output Format
-Return an array of integers containing frequency of the each element in B.
+Return whether the given array contains a subarray with a sum equal to 0.
 
 
 
 Example Input
 Input 1:
-A = [1, 2, 1, 1]
-B = [1, 2]
+
+ A = [1, 2, 3, 4, 5]
 Input 2:
-A = [2, 5, 9, 2, 8]
-B = [3, 2]
+
+ A = [-1, 1]
 
 
 Example Output
 Output 1:
-[3, 1]
+
+ 0
 Output 2:
-[0, 2]
+
+ 1
 
 
 Example Explanation
-For Input 1:
-The frequency of 1 in the array A is 3.
-The frequency of 2 in the array A is 1.
-For Input 2:
-The frequency of 3 in the array A is 0.
-The frequency of 2 in the array A is 2.
+Explanation 1:
+
+ No subarray has sum 0.
+Explanation 2:
+
+ The array has sum 0.
  */
 public class Assignment3 {
-	
+
 	public int[] solve(int[] A, int[] B) {
 
+	public int solve(int[] A) {
+		// Just write your code below to complete the function. Required input is
+		// available to you as the function arguments.
+		// Do not print the result or any output. Just return the result via this
+		// function.
 		int n = A.length;
-		int m = B.length;
+		int pf[] = new int[n];
 
-		HashMap<Integer, Integer> hashMap = new HashMap<>();
+		pf[0] = A[0];
+		for (int i = 1; i < n; i++) {
+			pf[i] = pf[i - 1] + A[i];
+		}
+
+		HashSet<Integer> hashset = new HashSet<>();
 
 		for (int i = 0; i < n; i++) {
-			if (hashMap.containsKey(A[i])) {
-				hashMap.put(A[i], hashMap.get(A[i]) + 1);
-
-			} else {
-				hashMap.put(A[i], 1);
-			}
-
+			hashset.add(A[i]);
 		}
-		int arr[] = new int[m];
-
-		for (int i = 0; i < m; i++) {
-			if (hashMap.containsKey(B[i])) {
-				arr[i] = hashMap.get(B[i]);
-			} else {
-				arr[i] = 0;
-			}
+		if (hashset.size() == A.length) {
+			return 1;
 		}
+		return 0;
 
-		return arr;
 	}
 
 }
