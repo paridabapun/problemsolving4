@@ -32,17 +32,17 @@ public class LessonQuestion2 {
 		return ans;
 	}
 	
-		//Optimise 
+		//Optimise  // this will work only array contains distinct elements
 	public int countNobleInteger2(int arr[]) {
-		Arrays.sort(arr);//SORTED in ascending order
+		Arrays.sort(arr);//SORTED in ascending order // O(nlogn)
 		
 		int n = arr.length;
 		int ans=0;
-		for(int i =0; i < n; i++) {
+		for(int i =0; i < n; i++) { //O(n)
 			if(arr[i] == i) {
 				ans++;
 			}
-		} // TC- O(n)
+		} // TC- O(nlogn)
 		
 		return ans;
 	}
