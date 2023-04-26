@@ -33,14 +33,10 @@ public class LessonQuestion1 {
 	public static void deleteElement(int arr[]) {
 
 		Arrays.sort(arr);// Ascending order TC - nlogn
-
 		// Reverse the array : // O(n)
 		reverseArr(arr);
-
 		int n = arr.length;
-
 		int ans = 0;
-
 		for (int i = 0; i < n; i++) {
 			ans += arr[i] * (i + 1);
 		} // O(n)

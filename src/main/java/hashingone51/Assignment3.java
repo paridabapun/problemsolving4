@@ -59,7 +59,6 @@ Explanation 2:
  */
 public class Assignment3 {
 
-	public int[] solve(int[] A, int[] B) {
 
 	public int solve(int[] A) {
 		// Just write your code below to complete the function. Required input is
