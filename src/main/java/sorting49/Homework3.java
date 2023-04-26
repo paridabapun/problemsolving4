@@ -54,27 +54,27 @@ The sorted order is [2, 19, 24, 22]. The tens digit of 2 is 0,
 that of 19 is 1 and that of 22 and 24 is 2.
  */
 public class Homework3 {
-	 public int[] solve(int[] A) {
+	public int[] solve(int[] A) {
 
-	       Integer[] arr = new Integer[A.length];
-	        for (int i = 0; i < A.length; i++) {
-	            arr[i] = A[i];
-	        }
-	        Arrays.sort(arr, new Comparator<Integer>() {
-	            public int compare(Integer a, Integer b) {
-	                int ta = (a/10)%10;
-	                int tb  = (b/10)%10;
-	                if(ta!=tb)
-	                return ta-tb;
-	                else
-	                return b-a;
-	            }
-	        });
-	        // convert Integer[] to int[]
-	        int[] ans = new int[arr.length];
-	for (int i = 0; i < arr.length; i++) {
-	    ans[i] = arr[i];
+		Integer[] arr = new Integer[A.length];
+		for (int i = 0; i < A.length; i++) {
+			arr[i] = A[i];
+		}
+		Arrays.sort(arr, new Comparator<Integer>() {
+			public int compare(Integer a, Integer b) {
+				int ta = (a / 10) % 10;
+				int tb = (b / 10) % 10;
+				if (ta != tb)
+					return ta - tb;
+				else
+					return b - a;
+			}
+		});
+		// convert Integer[] to int[]
+		int[] ans = new int[arr.length];
+		for (int i = 0; i < arr.length; i++) {
+			ans[i] = arr[i];
+		}
+		return ans;
 	}
-	        return ans;
-	    }
-	}
+}
