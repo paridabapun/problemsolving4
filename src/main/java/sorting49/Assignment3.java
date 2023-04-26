@@ -47,51 +47,50 @@ The number 2 has 2 factors, 7 has 2 factors and 4 has 3 factors.
 
  */
 public class Assignment3 {
-	public int countFactor(int A) {
+	  public int countFactor(int A) {
 
-		int count = 0;
+			int count = 0;
 
-		for (int i = 1; i * i <= A; i++) {
+			for (int i = 1; i * i <= A; i++) {
 
-			if (A % i == 0) {
-				if (i == A / i) {
-					count++;
-				} else {
-					count += 2;
+				if (A % i == 0) {
+					if (i == A / i) {
+						count++;
+					} else {
+						count += 2;
+					}
 				}
+
 			}
-
+			return count;
 		}
-		return count;
+	    public int[] solve(int[] A) {
+
+			   Integer[] arr = new Integer[A.length];
+	        for (int i = 0; i < A.length; i++) {
+	            arr[i] = A[i];
+	        }
+
+	         Arrays.sort(arr, new Comparator<Integer>() {
+	            public int compare(Integer a, Integer b) {
+					// in case of negetive  == the order will not change 
+					// in case of positive  == the order will be reversed
+					 
+	                int fa = countFactor(a); // 6, 6 -- 4
+	                int fb = countFactor(b); // 4,  8 -- 4
+	                if(fa!=fb)
+	                return fa-fb; // 2
+	                else
+	                return a-b; // 
+	            }
+	        });
+
+			  // convert Integer[] to int[]
+	int[] ans = new int[arr.length];
+	for (int i = 0; i < arr.length; i++) {
+	    ans[i] = arr[i];
 	}
-
-	public int[] solve(int[] A) {
-
-		Integer[] arr = new Integer[A.length];
-		for (int i = 0; i < A.length; i++) {
-			arr[i] = A[i];
-		}
-
-		Arrays.sort(arr, new Comparator<Integer>() {
-			public int compare(Integer a, Integer b) {
-				// in case of negetive == the order will not change
-				// in case of positive == the order will be reversed
-
-				int fa = countFactor(a); // 6, 6 -- 4
-				int fb = countFactor(b); // 4, 8 -- 4
-				if (fa != fb)
-					return fa - fb; // 2
-				else
-					return a - b; //
-			}
-		});
-
-		// convert Integer[] to int[]
-		int[] ans = new int[arr.length];
-		for (int i = 0; i < arr.length; i++) {
-			ans[i] = arr[i];
-		}
-
-		return ans;
+	     
+		 return ans;
+	    }
 	}
-}

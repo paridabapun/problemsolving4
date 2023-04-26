@@ -1,78 +1,89 @@
 package sorting49;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
+import java.util.Comparator;
 
 /*
- * Q1. Elements Removal
- * Problem Description
-Given an integer array A of size N. You can remove any element from the array in one operation.
-The cost of this operation is the sum of all elements in the array present before this operation.
+ * Q4. Largest Number
+Problem Description
+Given an array A of non-negative integers, arrange them such that they form the largest number.
 
-Find the minimum cost to remove all elements from the array.
+Note: The result may be very large, so you need to return a string instead of an integer.
 
 
 
 Problem Constraints
-0 <= N <= 1000
-1 <= A[i] <= 103
+1 <= len(A) <= 100000
+0 <= A[i] <= 2*109
 
 
 
 Input Format
-First and only argument is an integer array A.
+The first argument is an array of integers.
 
 
 
 Output Format
-Return an integer denoting the total cost of removing all elements from the array.
+Return a string representing the largest number.
 
 
 
 Example Input
 Input 1:
 
- A = [2, 1]
+ A = [3, 30, 34, 5, 9]
 Input 2:
 
- A = [5]
+ A = [2, 3, 9, 0]
 
 
 Example Output
 Output 1:
 
- 4
+ "9534330"
 Output 2:
 
- 5
+ "9320"
 
 
 Example Explanation
 Explanation 1:
 
- Given array A = [2, 1]
- Remove 2 from the array => [1]. Cost of this operation is (2 + 1) = 3.
- Remove 1 from the array => []. Cost of this operation is (1) = 1.
- So, total cost is = 3 + 1 = 4.
+Reorder the numbers to [9, 5, 34, 3, 30] to form the largest number.
 Explanation 2:
 
- There is only one element in the array. So, cost of removing is 5.
+Reorder the numbers to [9, 3, 2, 0] to form the largest number 9320.
+ 
+ */ 
 
- */
-public class Assignment4 {
-	public int solve(int[] A) {
-		// Arrays.sort(A, Collections.reverseOrder());
-		Arrays.sort(A); // nlogn
+//help_requests/706244/?ref=join-call-now
+public class Assignment4 { 
+	public String largestNumber(final int[] A) {
+		int n = A.length;
+		String s[] = new String[n];
 
-		int ans, sum = 0;
-
-		for (int i = 0; i < A.length; i++) {
-
-			sum += (A.length - i) * A[i];
+		for (int i = 0; i < n; i++) {
+			s[i] = Integer.toString(A[i]);
 		}
 
-		return sum;
+		Arrays.sort(s, new Comparator<String>() {
+			public int compare(String a, String b) {
+				String x = a + b;
+				String y = b + a;
+				return y.compareTo(x);
 
+			}
+		});
+
+		StringBuilder sb = new StringBuilder();
+		for (int i = 0; i < n; i++) {
+			sb.append(s[i]);
+
+		}
+
+		if (sb.charAt(0) == '0') {
+			return "0";
+		}
+		return sb.toString();
 	}
 }

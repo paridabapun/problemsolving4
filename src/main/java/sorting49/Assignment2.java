@@ -52,17 +52,22 @@ Explanation 2:
  */
 public class Assignment2 {
 	public int solve(int[] A) {
-		// Arrays.sort(A, Collections.reverseOrder());
-		Arrays.sort(A); // nlogn
 
-		int ans, sum = 0;
+		int n = A.length;
 
-		for (int i = 0; i < A.length; i++) {
+		Arrays.sort(A);
 
-			sum += (A.length - i) * A[i];
+		for (int i = 0; i < n; i++) {
+
 		}
 
-		return sum;
+		int count = 0;
+		for (int i = 0; i < n; i++) {
+			if (A[i] == i) {
+				count++;
+			}
+		}
+		return count > 0 ? 1 : -1;
 
 	}
 }
