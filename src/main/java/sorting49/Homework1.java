@@ -44,6 +44,9 @@ Example Explanation
 Explanation 1:
     [0 0 1 1 2 2] is the required order.
  */
+
+//https://www.youtube.com/watch?v=oaVa-9wmpns&amp;pp=ygUNU29ydCBieSBDb2xvcg%3D%3D
+//https://www.youtube.com/watch?v=HuS-ZsnEdbc
 public class Homework1 {
 	  public int[] sortColors(int[] A) {
 		  return null;
