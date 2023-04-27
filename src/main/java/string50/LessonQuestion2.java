@@ -13,7 +13,7 @@ public class LessonQuestion2 {
 
 		for (int i = 0; i < n; i++) {
 			int count = ch[i] - 'a';
-
+			System.out.println(ch[i]+" "+count+"What is this count");
 			freq[count]++;
 
 //			freq[ch[i]-'a']++;
