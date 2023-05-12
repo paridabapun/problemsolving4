@@ -7,18 +7,19 @@ public class LessonQuestion2 {
 
 	public static void sortString(char ch[]) {
 
+	//AS size count of alphabets is 26
 		int freq[] = new int[26];
 
 		int n = ch.length;
 
+		//storing all the character with index 
 		for (int i = 0; i < n; i++) {
-			int count = ch[i] - 'a';
-			System.out.println(ch[i]+" "+count+"What is this count");
-			freq[count]++;
-
+			int index = ch[i] - 'a';
+			freq[index]++;
 //			freq[ch[i]-'a']++;
 		}
 
+		
 		int k = 0;
 		for (char c = 'a'; c < 'z'; c++) {
 			for (int i = 0; i < freq[c - 'a']; i++) {
@@ -27,6 +28,8 @@ public class LessonQuestion2 {
 
 			}
 		}
+		
+		//freq[c - 'a'] means count of value of that alphabet 
 
 		for (int i = 0; i < freq.length; i++) {
 			System.out.print(freq[i] + " ");
